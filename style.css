@@ -1,0 +1,178 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('pho/dark-anime-scenery-wot9wg412s7h8yxa.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: aliceblue;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      background-color: black;
+      color: aliceblue;
+      display: flex;
+      align-items: center;
+      padding: 18px 10px;
+      font-family: 'Edu VIC WA NT Hand', cursive;
+      font-size: 26px;
+    }
+
+    nav img {
+      height: 34px;
+      margin-right: 10px;
+    }
+
+    .hiding1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px;
+      text-align: center;
+       
+    }
+
+    .hiding1 span {
+      font-size: 50px;
+      font-family: 'Savate', serif;
+      background-color: black;
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+
+    .hiding1 p {
+      font-size: 41px;
+      font-family: 'Savate', serif;
+      color: #ffffff;
+      background-color: black;
+      padding: 0 10px;
+     border-radius: 5px;
+    }
+
+    .hiding1 img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .cbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 40px;
+      text-align: left;
+      flex-wrap: wrap;
+    }
+    /* Add this to your existing style tag */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: popUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Add a small delay to paragraph after image */
+.reveal.text {
+  animation-delay: 0.6s;
+}
+
+@keyframes popUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes fadeInUpSmooth {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(-8px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Target both the poster image and text */
+.codeg img,
+.cbox .text {
+  animation: fadeInUpSmooth 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0; /* hidden at start */
+}
+
+/* Add a delay to the text for a cascade effect */
+.cbox .text {
+  animation-delay: 0.4s;
+}
+
+/* Delay text slightly for a staggered effect */
+.cbox .text {
+  animation-delay: 0.10s;
+}
+
+    .codeg img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+      
+    }
+
+    .cbox .text {
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 22px;
+      color: white;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1080px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hiding1 span {
+        font-size: 24px;
+      }
+
+      .hiding1 p {
+        font-size: 18px;
+      }
+
+      .hiding1 img {
+        height: 30px;
+      }
+
+      .cbox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .codeg img {
+        width: 90%;
+      }
+
+      .cbox .text {
+        font-size: 18px;
+      }
+    }
