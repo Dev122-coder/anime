@@ -12,3 +12,5 @@
       }, { once: true });
     });
   });
+
+  alert("Touch one time");
