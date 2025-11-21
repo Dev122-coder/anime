@@ -8,7 +8,219 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400;700&family=Poppins:wght@300;500;700&family=Savate:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
   <script src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+   <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-image: url('pho/dark-anime-scenery-wot9wg412s7h8yxa.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      color: aliceblue;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    nav {
+      background-color: black;
+      color: aliceblue;
+      display: flex;
+      align-items: center;
+      padding: 18px 10px;
+      font-family: 'Edu VIC WA NT Hand', cursive;
+      font-size: 26px;
+    }
+
+    nav img {
+      height: 34px;
+      margin-right: 10px;
+    }
+
+    .hiding1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 30px;
+      text-align: center;
+       
+    }
+
+    .hiding1 span {
+      font-size: 50px;
+      font-family: 'Savate', serif;
+      background-color: black;
+      padding: 0 10px;
+      border-radius: 5px;
+    }
+
+    .hiding1 p {
+      font-size: 41px;
+      font-family: 'Savate', serif;
+      color: #ffffff;
+      background-color: black;
+      padding: 0 10px;
+     border-radius: 5px;
+    }
+
+    .hiding1 img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+   .cbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      gap: 40px;
+      text-align: left;
+      flex-wrap: wrap;
+    }
+    /* Add this to your existing style tag */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  animation: popUp 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+/* Add a small delay to paragraph after image */
+.reveal.text {
+  animation-delay: 0.6s;
+}
+
+@keyframes popUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+@keyframes fadeInUpSmooth {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.95);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateY(-8px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Target both the poster image and text */
+.codeg img,
+.cbox .text {
+  animation: fadeInUpSmooth 1.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0; /* hidden at start */
+}
+
+/* Add a delay to the text for a cascade effect */
+.cbox .text {
+  animation-delay: 0.4s;
+}
+
+/* Delay text slightly for a staggered effect */
+.cbox .text {
+  animation-delay: 0.10s;
+}
+
+    .codeg img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+      
+    }
+
+    .cbox .text {
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 22px;
+      color: white;
+      padding: 25px;
+      border-radius: 8px;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1080px) {
+      /* body{
+        box-sizing: border-box;
+      } */
+      nav {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hiding1 span {
+        font-size: 24px;
+      }
+
+      .hiding1 p {
+        font-size: 18px;
+      }
+
+      .hiding1 img {
+        height: 30px;
+      }
+
+      .cbox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .codeg img {
+        width: 90%;
+      }
+
+      .cbox .text {
+        font-size: 18px;
+      }
+    }
+
+
+.picofc {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  margin-top: 20px;
+  max-width: 90vw;
+  scroll-snap-type: x mandatory;
+}
+
+.picofc img {
+
+  width: 480px;
+  height: auto;
+  border-radius: 10px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.picofc img:hover {
+  transform: scale(1.05);
+}
+
+
+    
+   </style>
 </head>
 <!-- audio part -->
   <audio id="bg-music" autoplay loop>
@@ -37,6 +249,11 @@
       <div class="text reveal">
         <b>Code Geass</b> is primarily an alternate history, mecha, and military anime. It also incorporates elements of science fiction, political drama, and psychological thriller. The series features a young man named Lelouch who gains a powerful ability called Geass and leads a rebellion against a powerful empire. 
       </div>
+      
+     <div class="picofc">
+          <img src="images/2.jpg" alt="">
+          <img src="images/Lelouch-Zero 1.avif" alt="">
+       </div>
     </div>
 
   </main>
@@ -88,11 +305,52 @@
 
      </div>
   </main2>
+  <!-- ......................................................... -->
 
+  
+  <main3>
+     <div>
+         <div class="hiding1 reveal">
+      <img src="pho/star-medal.png" alt="">
+      <span><b>Darling In The Franxx /ダーリン・イン・ザ・フランキス</b></span>
+     
+    </div>
+    <div class="cpics">
 
+    </div>
 
- 
-</script>
+    <div class="cbox">
+      <div class="codeg reveal">
+        <img src="pho/fr.jpg" alt="Code Geass Poster">
+      </div>
+      <div class="text reveal">
+        <b>Darling In The Franxx-</b> The love told through each character especially Zerotwo and Hiro goes to show that love is something all people can have and enjoy. It's powerful enough to stop space aliens. It's powerful enough to not matter if your human or not.
+
+     </div>
+  </main3>
+
+  <!-- .................................................... -->
+
+  <main4>
+     <div>
+         <div class="hiding1 reveal">
+      <img src="pho/star-medal.png" alt="">
+      <span><b>Attack On Titan /進撃の巨人</b></span>
+     
+    </div>
+    <div class="cpics">
+
+    </div>
+
+    <div class="cbox">
+      <div class="codeg reveal">
+        <img src="pho/aaa.jpg" alt="Code Geass Poster">
+      </div>
+      <div class="text reveal">
+        <b>Attack On Titan-</b> The main story of Attack on Titan revolves around Eren Yeager and his fight against the Titans, giant humanoid creatures that devour humans. Humanity lives within walled cities for protection, but when a Colossal Titan breaches the wall of Eren's hometown, he and his friends join the Survey Corps to fight back and reclaim their world.
+
+     </div>
+  </main4>
 
 </body>
 </html>
